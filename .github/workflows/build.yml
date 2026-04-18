@@ -270,7 +270,7 @@ jobs:
           if [[ "${{ inputs.android_version }}" == "android14" && "${{ inputs.kernel_version }}" == "6.1" ]]; then
             echo '修复sm8650 gunyah内存分配问题'
             cd $KERNEL_ROOT/common
-            curl -LSs  https://github.com/chlink2025/GKI_KernelSU_SUSFS/raw/refs/heads/main/0001-drivers-gunyah-fix-SCM-VMID-handling-for-share-and-r.patch -o 0001-drivers-gunyah-fix-SCM-VMID-handling-for-share-and-r.patch 
+            curl -LSs  https://github.com/chlink2025/GKI_KernelSU_SUSFS/raw/refs/heads/dev/0001-drivers-gunyah-fix-SCM-VMID-handling-for-share-and-r.patch -o 0001-drivers-gunyah-fix-SCM-VMID-handling-for-share-and-r.patch 
             git apply 0001-drivers-gunyah-fix-SCM-VMID-handling-for-share-and-r.patch 
             rm 0001-drivers-gunyah-fix-SCM-VMID-handling-for-share-and-r.patch 
           fi
